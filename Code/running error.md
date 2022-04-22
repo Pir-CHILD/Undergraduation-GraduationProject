@@ -2,6 +2,10 @@
 
 > 目前运行失败，但环境配置正常，推测代码问题。
 
+配置问题可参考：
+1. [理清GPU、CUDA、CUDA Toolkit、cuDNN关系以及下载安装](https://blog.csdn.net/qq_42406643/article/details/109545766)
+2. [win10+RTX2070+tensorflow-gpu+cuda9.0+pycharm配置小结](https://www.jianshu.com/p/8f774b7866c7)
+
 该代码分为 **ImageAliment** 和 **ImageReconstruction** 两部分，现在还 block 在第一部分。 
 根据报错信息进行debug，目前可能存在的问题有：
 ### GPU 资源使用率
