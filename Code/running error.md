@@ -28,3 +28,14 @@
 > 这里会补贴为什么该方案可能有效的url  
 
 在源代码中我也修改了 `TRAIN_BATCH_SIZE` ，可惜依然不行...
+
+---
+这里对于配置问题已经浪费大量时间，且在该conda环境下使用python进行简单程序测试可以判断能正常使用GPU与tensorflow，故**认为**就是代码问题。
+
+对于运行的warning：  
+
+    E tensorflow/core/grappler/optimizers/dependency_optimizer.cc:704] Iteration = 0, topological sort failed with message: The graph couldn't be sorted in topological order.
+
+[这里](https://stackoverflow.com/questions/52607063/tensorflow-warning-the-graph-couldnt-be-sorted-in-topological-order)指出是过多有向图循环。
+
+与前文所推测 batchsize 合起来想，可能就得改代码了...
